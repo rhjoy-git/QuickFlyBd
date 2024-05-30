@@ -1,0 +1,119 @@
+.appointment {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-form {
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100% !important;
+  padding: 12px 20px !important;
+  border-radius: 6px !important;
+  border: 1px solid #ccc !important;
+  background: white !important;
+  font-size: 14px !important;
+  color: #333 !important;
+  outline: none !important;
+  transition: all 0.3s ease !important;
+}
+.phone-number .form-span {
+  border: 1px solid #ced4da !important;
+  padding: 12px 20px !important;
+  border-right: none !important;
+  background-color: #e9ecef !important;
+}
+.phone-number .form-input{
+  border-radius: 0 6px 6px 0 !important;
+  flex: 1 !important;
+}
+.form-input:focus {
+  border-color: #6a64f1;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-btn {
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 12px 24px;
+  border: none;
+  font-weight: 600;
+  background-color: #6a64f1;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-btn:hover {
+  background-color: #594bf1;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formbold--mx-3 {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.formbold-px-3 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.mb-3 {
+  margin-bottom: 20px;
+}
+
+.pt-1 {
+  padding-top: 10px;
+}
+
+@media (min-width: 540px) {
+  .sm\:w-half {
+    width: 50%;
+  }
+}
+
+@media (max-width: 540px) {
+  .appointment-form {
+    padding: 15px;
+  }
+
+  .form-input {
+    padding: 10px 15px;
+  }
+
+  .form-btn {
+    padding: 10px 20px;
+  }
+
+  .formbold--mx-3 {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+
+  .formbold-px-3 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
