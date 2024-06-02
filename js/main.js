@@ -82,6 +82,24 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 });
+/*===============================
+	Visa Requirement scrollspy
+=================================*/
+//<!-- smooth ScrollSpy start -->
+$(document).ready(function () {
+	$('a[href*="#"]').on('click', function (e) {
+		var target = $(this).attr('href');
+		if ($(target).length) {
+			e.preventDefault();
+			$('html, body').animate({
+				scrollTop: $(target).offset().top
+			}, 1000, 'linear');
+		}
+	});
+});
+
+
+//<!-- smooth ScrollSpy end -->
 /*=========================================*/
 (function ($) {
 	"use strict";
@@ -112,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		/*====================================
 			Mobile Menu
 		======================================*/
-		$(document).ready(function(){
+		$(document).ready(function () {
 			$('.menu').slicknav({
 				prependTo: ".mobile-nav",
 				duration: 300,

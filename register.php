@@ -78,7 +78,7 @@
   <!-- Start Appointment Area -->
   <?php include 'php/register-form>.php'; ?>
   <!-- Footer Area -->
-  <?php include'php/copyright.php'; display_copyright_section(); ?>
+  <?php include'php/copyright.php';?>
 
 
   <!-- jquery Min JS -->

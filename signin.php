@@ -56,8 +56,7 @@
   <?php include './php/signin.php'; ?>
 
   <!-- Footer Area -->
-  <?php include 'php/copyright.php';
-  display_copyright_section(); ?>
+  <?php include 'php/copyright.php';?>
 
   <!-- Bootstrap JS -->
   <script src="js/bootstrap.min.js"></script>
