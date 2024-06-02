@@ -3,7 +3,7 @@
 $logo_url = "img/logov.png";
 $menu_items = [
     ['name' => 'Home', 'link' => 'index.php', 'submenu' => []],
-    ['name' => 'Visa Services', 'link' => '#', 'submenu' => [
+    ['name' => 'Visa Services', 'link' => './visaServices.php', 'submenu' => [
         ['name' => 'Malaysia', 'link' => 'index.php'],
         ['name' => 'Singapore', 'link' => 'index.php'],
         ['name' => 'Thailand', 'link' => 'index.php'],
@@ -12,8 +12,8 @@ $menu_items = [
         ['name' => 'Vietnam', 'link' => 'index.php'],
         ['name' => 'Schengen Area', 'link' => 'index.php']
     ]],
-    ['name' => 'Hajj & Umrah', 'link' => 'portfolio-details.php', 'class' => 'sparkle sparkle-blink bg-danger', 'submenu' => []],
-    ['name' => 'Air Ticket', 'link' => '#', 'submenu' => []],
+    ['name' => 'Hajj & Umrah', 'link' => '#', 'class' => 'sparkle sparkle-blink bg-danger', 'submenu' => []],
+    ['name' => 'Air Ticket', 'link' => './airticket.php', 'submenu' => []],
     ['name' => 'Tour Package', 'link' => 'blog.php', 'submenu' => []],
     ['name' => 'Man Power', 'link' => 'blog.php', 'submenu' => []],
     ['name' => 'Contact', 'link' => 'contact.php', 'submenu' => []]

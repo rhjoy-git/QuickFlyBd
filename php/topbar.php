@@ -1,6 +1,6 @@
 <?php
 $phone = "+880 1515-264011";
-$email = "support@yourmail.com";
+$email = "quickflybd@gmail.com";
 $facebook_url = "https://www.facebook.com/quickflylimited";
 $whatsapp_url = "https://wa.me/+8801620862832";
 

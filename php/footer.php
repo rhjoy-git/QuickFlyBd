@@ -24,8 +24,6 @@ $open_hours = [
     ['day' => 'Saturday', 'time' => '9.00-18.30'],
     ['day' => 'Monday - Thursday', 'time' => '9.00-15.00']
 ];
-
-
 ?>
 
 <footer id="footer" class="footer">
@@ -113,4 +111,4 @@ $open_hours = [
     <!-- Copyright -->
     <!--/ End Copyright -->
 </footer>
-<?php include'copyright.php'; display_copyright_section(); ?>
+<?php include'copyright.php';?>
