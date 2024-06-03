@@ -27,6 +27,13 @@ body {
 .pro-features .get-pro {
   font-weight: 700;
 }
+.pro-features .get-pro:hover, 
+.pro-features .get-pro:focus{
+  background-color: #ffbf00 !important;
+}
+.pro-features .get-pro i{
+  color: #fff;
+}
 .pro-features.active {
   right: 0;
 }
@@ -3464,7 +3471,7 @@ ol li {
   position: relative;
 }
 .footer .footer-top {
-  padding: 100px 0px;
+  padding: 50px 0px 30px;
   position: relative;
   background: #1a76d1;
 }
@@ -3535,7 +3542,7 @@ ol li {
   font-size: 20px;
   font-weight: 600;
   text-transform: capitalize;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding-bottom: 20px;
   text-transform: capitalize;
   position: relative;

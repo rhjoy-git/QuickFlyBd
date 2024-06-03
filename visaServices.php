@@ -12,7 +12,11 @@ $visaInfo = [
             '60 days regular visa : BDT 9,500 (Child)',
             '60 days regular visa : BDT 9,500 (Female)'
         ],
-        'description' => 'Union Tours and Travels Ltd worked as an authorized visa agent of High Commission of Malaysia for 10 years. It maintains very experienced and skilled team to process Malaysia visa. Our clients are Banks, Diplomats, Foreign Missions, NGOs, Top Corporate offices, and Travel Trade Partners.',
+        'visacontacts' => [
+            'House#503 (1st Floor), Road#09, Baridhara DOHS, Dhaka',
+            '+880 17183-66365'
+        ],
+        'description' => 'Quick Fly  worked as an authorized visa agent of High Commission of Malaysia for 10 years. It maintains very experienced and skilled team to process Malaysia visa. Our clients are Banks, Diplomats, Foreign Missions, NGOs, Top Corporate offices, and Travel Trade Partners.',
         'requirements' => [
             'Passport Validity Minimum 07 Month.',
             '2 copy recent white background photo matt paper (35mmx50 mm).',
@@ -36,7 +40,11 @@ $visaInfo = [
             '60 days regular visa : BDT 19,500 (Child)',
             '60 days regular visa : BDT 19,500 (Female)'
         ],
-        'description' => 'UTTL is one of the most compliant and renowned Visa supporting agents in Bangladesh. UTTL is having well expert, skilled hands who have sound knowledgeable in processing Visa formalities. Our clients include Banks, Diplomats, Foreign Missions, NGOs, top corporate offices, and Travel Trade Partners.',
+        'visacontacts' => [
+            'House#503 (1st Floor), Road#09, Baridhara DOHS, Dhaka',
+            '+880 17183-66365'
+        ],
+        'description' => 'Quick Fly  is one of the most compliant and renowned Visa supporting agents in Bangladesh. Quick Fly  is having well expert, skilled hands who have sound knowledgeable in processing Visa formalities. Our clients include Banks, Diplomats, Foreign Missions, NGOs, top corporate offices, and Travel Trade Partners.',
         'requirements' => [
             'Passport Validity Minimum 06 Month.',
             '2 copy recent white background photo (35mmx45mm)',
@@ -62,7 +70,11 @@ $visaInfo = [
             '60 days regular visa : BDT 19,500 (Child)',
             '60 days regular visa : BDT 19,500 (Female)'
         ],
-        'description' => 'UTTL is one of the most compliant and renowned Visa supporting agents in Bangladesh. UTTL is having well expert, skilled hands who have sound knowledgeable in processing Visa formalities. Our clients include Banks, Diplomats, Foreign Missions, NGOs, top corporate offices, and Travel Trade Partners.',
+        'visacontacts' => [
+            'House#503 (1st Floor), Road#09, Baridhara DOHS, Dhaka',
+            '+880 17183-66365'
+        ],
+        'description' => 'Quick Fly  is one of the most compliant and renowned Visa supporting agents in Bangladesh. Quick Fly  is having well expert, skilled hands who have sound knowledgeable in processing Visa formalities. Our clients include Banks, Diplomats, Foreign Missions, NGOs, top corporate offices, and Travel Trade Partners.',
         'requirements' => [
             'Passport Validity Minimum 06 Month.',
             '2 copy recent white background photo (35mmx45mm)',
@@ -88,7 +100,11 @@ $visaInfo = [
             '60 days regular visa : BDT 19,500 (Child)',
             '60 days regular visa : BDT 19,500 (Female)'
         ],
-        'description' => 'UTTL is one of the most compliant and renowned Visa supporting agents in Bangladesh. UTTL is having well expert, skilled hands who have sound knowledgeable in processing Visa formalities. Our clients include Banks, Diplomats, Foreign Missions, NGOs, top corporate offices, and Travel Trade Partners.',
+        'visacontacts' => [
+            'House#503 (1st Floor), Road#09, Baridhara DOHS, Dhaka',
+            '+880 17183-66365'
+        ],
+        'description' => 'Quick Fly  is one of the most compliant and renowned Visa supporting agents in Bangladesh. Quick Fly  is having well expert, skilled hands who have sound knowledgeable in processing Visa formalities. Our clients include Banks, Diplomats, Foreign Missions, NGOs, top corporate offices, and Travel Trade Partners.',
         'requirements' => [
             'Passport Validity Minimum 06 Month.',
             '2 copy recent white background photo (35mmx45mm)',
@@ -114,7 +130,11 @@ $visaInfo = [
             '60 days regular visa : BDT 19,500 (Child)',
             '60 days regular visa : BDT 19,500 (Female)'
         ],
-        'description' => 'UTTL is one of the most compliant and renowned Visa supporting agents in Bangladesh. UTTL is having well expert, skilled hands who have sound knowledgeable in processing Visa formalities. Our clients include Banks, Diplomats, Foreign Missions, NGOs, top corporate offices, and Travel Trade Partners.',
+        'visacontacts' => [
+            'House#503 (1st Floor), Road#09, Baridhara DOHS, Dhaka',
+            '+880 17183-66365'
+        ],
+        'description' => 'Quick Fly  is one of the most compliant and renowned Visa supporting agents in Bangladesh. Quick Fly  is having well expert, skilled hands who have sound knowledgeable in processing Visa formalities. Our clients include Banks, Diplomats, Foreign Missions, NGOs, top corporate offices, and Travel Trade Partners.',
         'requirements' => [
             'Passport Validity Minimum 06 Month.',
             '2 copy recent white background photo (35mmx45mm)',
@@ -140,7 +160,11 @@ $visaInfo = [
             '60 days regular visa : BDT 19,500 (Child)',
             '60 days regular visa : BDT 19,500 (Female)'
         ],
-        'description' => 'UTTL is one of the most compliant and renowned Visa supporting agents in Bangladesh. UTTL is having well expert, skilled hands who have sound knowledgeable in processing Visa formalities. Our clients include Banks, Diplomats, Foreign Missions, NGOs, top corporate offices, and Travel Trade Partners.',
+        'visacontacts' => [
+            'House#503 (1st Floor), Road#09, Baridhara DOHS, Dhaka',
+            '+880 17183-66365'
+        ],
+        'description' => 'Quick Fly  is one of the most compliant and renowned Visa supporting agents in Bangladesh. Quick Fly  is having well expert, skilled hands who have sound knowledgeable in processing Visa formalities. Our clients include Banks, Diplomats, Foreign Missions, NGOs, top corporate offices, and Travel Trade Partners.',
         'requirements' => [
             'Passport Validity Minimum 06 Month.',
             '2 copy recent white background photo (35mmx45mm)',
@@ -166,7 +190,11 @@ $visaInfo = [
             '60 days regular visa : BDT 19,500 (Child)',
             '60 days regular visa : BDT 19,500 (Female)'
         ],
-        'description' => 'UTTL is one of the most compliant and renowned Visa supporting agents in Bangladesh. UTTL is having well expert, skilled hands who have sound knowledgeable in processing Visa formalities. Our clients include Banks, Diplomats, Foreign Missions, NGOs, top corporate offices, and Travel Trade Partners.',
+        'visacontacts' => [
+            'House#503 (1st Floor), Road#09, Baridhara DOHS, Dhaka',
+            '+880 17183-66365'
+        ],
+        'description' => 'Quick Fly  is one of the most compliant and renowned Visa supporting agents in Bangladesh. Quick Fly  is having well expert, skilled hands who have sound knowledgeable in processing Visa formalities. Our clients include Banks, Diplomats, Foreign Missions, NGOs, top corporate offices, and Travel Trade Partners.',
         'requirements' => [
             'Passport Validity Minimum 06 Month.',
             '2 copy recent white background photo (35mmx45mm)',
@@ -182,7 +210,7 @@ $visaInfo = [
     ],
     [
         'id' => 'schengenarea',
-        'country' => 'Schengen Area',
+        'country' => 'Europe',
         'image' => './img/services/schengenarea.jpg',
         'fees' => [
             '30 days regular visa : BDT 14,500 (Male)',
@@ -192,7 +220,11 @@ $visaInfo = [
             '60 days regular visa : BDT 19,500 (Child)',
             '60 days regular visa : BDT 19,500 (Female)'
         ],
-        'description' => 'UTTL is one of the most compliant and renowned Visa supporting agents in Bangladesh. UTTL is having well expert, skilled hands who have sound knowledgeable in processing Visa formalities. Our clients include Banks, Diplomats, Foreign Missions, NGOs, top corporate offices, and Travel Trade Partners.',
+        'visacontacts' => [
+            'House#503 (1st Floor), Road#09, Baridhara DOHS, Dhaka',
+            '+880 17183-66365'
+        ],
+        'description' => 'Quick Fly  is one of the most compliant and renowned Visa supporting agents in Bangladesh. Quick Fly  is having well expert, skilled hands who have sound knowledgeable in processing Visa formalities. Our clients include Banks, Diplomats, Foreign Missions, NGOs, top corporate offices, and Travel Trade Partners.',
         'requirements' => [
             'Passport Validity Minimum 06 Month.',
             '2 copy recent white background photo (35mmx45mm)',
@@ -215,8 +247,10 @@ $visaInfo = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
     <title>Visa Requirements</title>
-
+    <!-- Favicon -->
+    <link rel="icon" href="img/logo.png" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -251,7 +285,7 @@ $visaInfo = [
                     <div class="col-12">
                         <h2>Visa Requirements</h2>
                         <ul class="bread-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="./index.php">Home</a></li>
                             <li><i class="icofont-simple-right"></i></li>
                             <li class="active">Visa Requirements</li>
                         </ul>
@@ -305,7 +339,11 @@ $visaInfo = [
                                     </div>
                                     <div id="collapseTwo<?= $visa['country'] ?>" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                                         <div class="card-body">
-                                            Anim pariatur cliche reprehenderit
+                                            <ul>
+                                                <?php foreach ($visa['visacontacts'] as $contact) : ?>
+                                                    <li><i class="icofont-checked text-success"></i> <?= $contact ?></li>
+                                                <?php endforeach; ?>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -319,7 +357,7 @@ $visaInfo = [
                                     </div>
                                     <div id="collapseThree<?= $visa['country'] ?>" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                                         <div class="card-body">
-                                            Anim pariatur cliche reprehenderit
+                                            House No:503,(1st Floor),Road No: 9,Baridhara DOHS, Dhaka
                                         </div>
                                     </div>
                                 </div>

@@ -82,25 +82,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 });
-/*===============================
-	Visa Requirement scrollspy
-=================================*/
-//<!-- smooth ScrollSpy start -->
-$(document).ready(function () {
-	$('a[href*="#"]').on('click', function (e) {
-		var target = $(this).attr('href');
-		var targetElement = target.substring(target.indexOf('#'));
-		if ($(targetElement).length) {
-			e.preventDefault();
-			$('html, body').animate({
-				scrollTop: $(targetElement).offset().top - 120
-			}, 1000, 'linear');
-		}
-	});
-});
-
-
-//<!-- smooth ScrollSpy end -->
 /*=========================================*/
 (function ($) {
 	"use strict";
@@ -126,6 +107,20 @@ $(document).ready(function () {
 
 		$('.pro-features .get-pro').on("click", function () {
 			$('.pro-features').toggleClass('active');
+
+			var $this = $(this);
+			var $icon = $this.find('i');
+			var textVisible = $this.text().trim() === 'UiniLab';
+
+			if (textVisible) {
+				$this.contents().filter(function () {
+					return this.nodeType === 3; // Node.TEXT_NODE
+				}).remove();
+				$icon.show();
+			} else {
+				$this.prepend('UiniLab');
+				$icon.hide();
+			}
 		});
 
 		/*====================================
@@ -391,7 +386,24 @@ $(document).ready(function () {
 	});
 
 })(jQuery);
+/*===============================
+	Visa Requirement scrollspy
+=================================*/
+//<!-- smooth ScrollSpy start -->
+$(document).ready(function () {
+	$('a[href*="#"]').on('click', function (e) {
+		var target = $(this).attr('href');
+		var targetElement = target.substring(target.indexOf('#'));
+		if ($(targetElement).length) {
+			e.preventDefault();
+			$('html, body').animate({
+				scrollTop: $(targetElement).offset().top - 120
+			}, 1000, 'linear');
+		}
+	});
+});
 
+//<!-- smooth ScrollSpy end -->
 /*===============================
 	Form Registration Validity
 =================================*/

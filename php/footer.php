@@ -9,13 +9,8 @@ $social_links = [
 $quick_links = [
     ['url' => '#', 'text' => 'Home'],
     ['url' => '#', 'text' => 'About Us'],
-    ['url' => '#', 'text' => 'Services'],
-    ['url' => '#', 'text' => 'Our Cases'],
-    ['url' => '#', 'text' => 'Other Links'],
+    ['url' => '#', 'text' => 'Services'], 
     ['url' => '#', 'text' => 'Consulting'],
-    ['url' => '#', 'text' => 'Finance'],
-    ['url' => '#', 'text' => 'Testimonials'],
-    ['url' => '#', 'text' => 'FAQ'],
     ['url' => '#', 'text' => 'Contact Us']
 ];
 
@@ -31,8 +26,8 @@ $open_hours = [
     <div class="footer-top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="single-footer">
+                <div class="col-md-4 col-12">
+                    <div class="single-footer px-md-4">
                         <h2>About Us</h2>
                         <p>
                             Lorem ipsum dolor sit am consectetur adipisicing elit do
@@ -49,8 +44,8 @@ $open_hours = [
                         <!-- End Social -->
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="single-footer f-link">
+                <div class="col-md-4 col-12">
+                    <div class="single-footer f-link px-md-4">
                         <h2>Quick Links</h2>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-12">
@@ -74,8 +69,8 @@ $open_hours = [
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="single-footer">
+                <div class="col-md-4 col-12">
+                    <div class="single-footer px-md-4">
                         <h2>Open Hours</h2>
                         <p>
                             Lorem ipsum dolor sit ame consectetur adipisicing elit do
@@ -86,22 +81,6 @@ $open_hours = [
                                 <li class="day"><?php echo $hours['day']; ?> <span><?php echo $hours['time']; ?></span></li>
                             <?php endforeach; ?>
                         </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="single-footer">
-                        <h2>Newsletter</h2>
-                        <p>
-                            Subscribe to our newsletter to get all our news in your inbox.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                        <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-                            <input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
-                                   onblur="this.placeholder = 'Your email address'" required="" type="email" />
-                            <button class="button">
-                                <i class="icofont icofont-paper-plane"></i>
-                            </button>
-                        </form>
                     </div>
                 </div>
             </div>

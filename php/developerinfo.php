@@ -1,5 +1,5 @@
 <ul class="pro-features">
-    <a class="get-pro bg-warning text-dark" href="#">UiniLab</a>
+    <a class="get-pro bg-warning text-dark" href="#">UiniLab<i class="icofont-ui-close" style="display: none;"></i></a>
     <li class="big-title">
       I'm<a href="https://www.facebook.com/iam.RakibulHasanJoy">
         Rakibul Hasan Joy.</a>
