@@ -89,10 +89,11 @@ document.addEventListener('DOMContentLoaded', function () {
 $(document).ready(function () {
 	$('a[href*="#"]').on('click', function (e) {
 		var target = $(this).attr('href');
-		if ($(target).length) {
+		var targetElement = target.substring(target.indexOf('#'));
+		if ($(targetElement).length) {
 			e.preventDefault();
 			$('html, body').animate({
-				scrollTop: $(target).offset().top
+				scrollTop: $(targetElement).offset().top - 120
 			}, 1000, 'linear');
 		}
 	});

@@ -2,21 +2,21 @@
 // Dynamic data (this could come from a database or other sources)
 $logo_url = "img/logov.png";
 $menu_items = [
-    ['id' => 'home', 'name' => 'Home', 'link' => 'index.php', 'submenu' => []],
-    ['id' => 'visaService', 'name' => 'Visa Services', 'link' => '#', 'submenu' => [
-        ['name' => 'Malaysia', 'link' => '#malaysia', 'id' => 'malaysia'],
-        ['name' => 'Singapore', 'link' => '#singapore', 'id' => 'singapore'],
-        ['name' => 'Thailand', 'link' => '#thailand', 'id' => 'thailand'],
-        ['name' => 'Dubai', 'link' => '#dubai', 'id' => 'dubai'],
-        ['name' => 'China', 'link' => '#china', 'id' => 'china'],
-        ['name' => 'Vietnam', 'link' => '#vietnam', 'id' => 'vietnam'],
-        ['name' => 'Schengen Area', 'link' => '#schengenarea', 'id' => 'schengenarea']
+    ['name' => 'Home', 'link' => 'index.php', 'submenu' => []],
+    ['name' => 'Visa Services', 'link' => './visaServices.php', 'submenu' => [
+        ['name' => 'Malaysia', 'link' => './visaServices.php#malaysia'],
+        ['name' => 'Singapore', 'link' => './visaServices.php#singapore'],
+        ['name' => 'Thailand', 'link' => './visaServices.php#thailand',],
+        ['name' => 'Dubai', 'link' => './visaServices.php#dubai'],
+        ['name' => 'China', 'link' => './visaServices.php#china'],
+        ['name' => 'Vietnam', 'link' => './visaServices.php#vietnam'],
+        ['name' => 'Schengen Area', 'link' => './visaServices.php#schengenarea']
     ]],
-    ['id' => 'hajjUmra', 'name' => 'Hajj & Umrah', 'link' => '#', 'class' => 'sparkle sparkle-blink bg-danger', 'submenu' => []],
-    ['id' => 'airTicket', 'name' => 'Air Ticket', 'link' => './airticket.php', 'submenu' => []],
-    ['id' => 'tourpackage', 'name' => 'Tour Package', 'link' => 'blog.php', 'submenu' => []],
-    ['id' => 'manPower', 'name' => 'Man Power', 'link' => 'blog.php', 'submenu' => []],
-    ['id' => 'contact', 'name' => 'Contact', 'link' => 'contact.php', 'submenu' => []]
+    ['name' => 'Hajj & Umrah', 'link' => '#', 'class' => 'sparkle sparkle-blink bg-danger', 'submenu' => []],
+    ['name' => 'Air Ticket', 'link' => './airticket.php', 'submenu' => []],
+    ['name' => 'Tour Package', 'link' => 'blog.php', 'submenu' => []],
+    ['name' => 'Man Power', 'link' => 'blog.php', 'submenu' => []],
+    ['name' => 'Contact', 'link' => 'contact.php', 'submenu' => []]
 ];
 ?>
 
@@ -47,14 +47,14 @@ $menu_items = [
                             <nav class="navigation">
                                 <ul class="nav justify-content-end align-item-center menu">
                                     <?php foreach ($menu_items as $item) : ?>
-                                        <li class="<?php echo isset($item['class']) ? $item['class'] : ''; ?>" id="<?php echo $item['id'];?>">
+                                        <li class="<?php echo isset($item['class']) ? $item['class'] : ''; ?>">
                                             <a href="<?php echo $item['link']; ?>"><?php echo $item['name']; ?>
                                                 <?php if (!empty($item['submenu'])) : ?><i class="icofont-rounded-down"></i><?php endif; ?>
                                             </a>
                                             <?php if (!empty($item['submenu'])) : ?>
                                                 <ul class="dropdown">
                                                     <?php foreach ($item['submenu'] as $submenu) : ?>
-                                                        <li><a href="<?php echo $submenu['link']; ?>" id="<?php echo $submenu['id']; ?>"><?php echo $submenu['name']; ?></a></li>
+                                                        <li><a href="<?php echo $submenu['link']; ?>"><?php echo $submenu['name']; ?></a></li>
                                                     <?php endforeach; ?>
                                                 </ul>
                                             <?php endif; ?>

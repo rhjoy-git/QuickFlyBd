@@ -3,7 +3,7 @@ $visaInfo = [
     [
         'id' => 'malaysia',
         'country' => 'Malaysia',
-        'image' => './img/malaysia.jpg',
+        'image' => './img/services/malaysia.jpg',
         'fees' => [
             '30 days regular visa : BDT 4,500 (Male)',
             '30 days regular visa : BDT 4,500 (Female)',
@@ -27,7 +27,7 @@ $visaInfo = [
     [
         'id' => 'singapore',
         'country' => 'Singapore',
-        'image' => './img/thailand.jpg',
+        'image' => './img/services/singapore.jpg',
         'fees' => [
             '30 days regular visa : BDT 14,500 (Male)',
             '30 days regular visa : BDT 14,500 (Female)',
@@ -53,7 +53,7 @@ $visaInfo = [
     [
         'id' => 'thailand',
         'country' => 'Thailand',
-        'image' => './img/thailand.jpg',
+        'image' => './img/services/thailand.jpg',
         'fees' => [
             '30 days regular visa : BDT 14,500 (Male)',
             '30 days regular visa : BDT 14,500 (Female)',
@@ -79,7 +79,7 @@ $visaInfo = [
     [
         'id' => 'dubai',
         'country' => 'Dubai',
-        'image' => './img/thailand.jpg',
+        'image' => './img/services/dubai.jpg',
         'fees' => [
             '30 days regular visa : BDT 14,500 (Male)',
             '30 days regular visa : BDT 14,500 (Female)',
@@ -105,7 +105,7 @@ $visaInfo = [
     [
         'id' => 'qatar',
         'country' => 'Qatar',
-        'image' => './img/thailand.jpg',
+        'image' => './img/services/qatar.jpg',
         'fees' => [
             '30 days regular visa : BDT 14,500 (Male)',
             '30 days regular visa : BDT 14,500 (Female)',
@@ -131,7 +131,7 @@ $visaInfo = [
     [
         'id' => 'china',
         'country' => 'China',
-        'image' => './img/thailand.jpg',
+        'image' => './img/services/china.jpg',
         'fees' => [
             '30 days regular visa : BDT 14,500 (Male)',
             '30 days regular visa : BDT 14,500 (Female)',
@@ -157,7 +157,33 @@ $visaInfo = [
     [
         'id' => 'vietnam',
         'country' => 'vietnam',
-        'image' => './img/thailand.jpg',
+        'image' => './img/services/vietnam.jpg',
+        'fees' => [
+            '30 days regular visa : BDT 14,500 (Male)',
+            '30 days regular visa : BDT 14,500 (Female)',
+            '30 days regular visa : BDT 2,500 (Child)',
+            '60 days regular visa : BDT 19,500 (Male)',
+            '60 days regular visa : BDT 19,500 (Child)',
+            '60 days regular visa : BDT 19,500 (Female)'
+        ],
+        'description' => 'UTTL is one of the most compliant and renowned Visa supporting agents in Bangladesh. UTTL is having well expert, skilled hands who have sound knowledgeable in processing Visa formalities. Our clients include Banks, Diplomats, Foreign Missions, NGOs, top corporate offices, and Travel Trade Partners.',
+        'requirements' => [
+            'Passport Validity Minimum 06 Month.',
+            '2 copy recent white background photo (35mmx45mm)',
+            'Last 6 months Bank statement (Minimum Balance 65,000/= per person)',
+            'Bank solvency certificate.',
+            'Salary certificate or pay slip (if job holder).',
+            'Company trade license photocopy with notarized for the businessman.',
+            'NOC and ID card copy (jobholder or student).',
+            'Company Letterhead pad (02 copies) & visiting card (02 copies).',
+            'Marriage certificate (required if not mention the spouse in the passport).',
+            'Birth certificate (if child).'
+        ]
+    ],
+    [
+        'id' => 'schengenarea',
+        'country' => 'Schengen Area',
+        'image' => './img/services/schengenarea.jpg',
         'fees' => [
             '30 days regular visa : BDT 14,500 (Male)',
             '30 days regular visa : BDT 14,500 (Female)',
@@ -210,6 +236,10 @@ $visaInfo = [
 
 <body>
 
+    <!-- Preloader -->
+    <?php include 'php/preloader.php'; ?>
+    <!-- Get Developer Info -->
+    <?php include 'php/developerinfo.php'; ?>
     <!-- Header Area -->
     <?php include 'php/header.php'; ?>
 
@@ -234,86 +264,86 @@ $visaInfo = [
 
     <!-- Visa Requirements Area -->
     <section class="py-4 visa-requirement">
-    <div class="container">
-        <?php foreach ($visaInfo as $visa) : ?>
-            <div id="<?php echo $visa['id']; ?>" class="py-4 country-area">
-                <h1 id="country" class="fs-1 text-center mb-5 text-uppercase position-relative">
-                    <?= $visa['country'] ?> Visa
-                </h1>
-                <div class="row">
-                    <div class="col-12"></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-12 p-4">
-                        <a href="#" class=""><img class="img-fluid rounded-top" src="<?= $visa['image'] ?>" alt="<?= $visa['country'] ?>" /></a>
-                        <div id="accordion">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne<?= $visa['country'] ?>" aria-expanded="true" aria-controls="collapseOne<?= $visa['country'] ?>">
-                                            Visa Fees & service charge.
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseOne<?= $visa['country'] ?>" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                                    <div class="card-body">
-                                        <ul>
-                                            <?php foreach ($visa['fees'] as $fee) : ?>
-                                                <li><i class="icofont-checked text-success"></i> <?= $fee ?></li>
-                                            <?php endforeach; ?>
-                                        </ul>
+        <div class="container">
+            <?php foreach ($visaInfo as $visa) : ?>
+                <div id="<?php echo $visa['id']; ?>" class="py-4 country-area">
+                    <h1 id="country" class="fs-1 text-center mb-5 text-uppercase position-relative">
+                        <?= $visa['country'] ?> Visa
+                    </h1>
+                    <div class="row">
+                        <div class="col-12"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-12 p-4">
+                            <a href="#" class=""><img class="img-fluid rounded-top" src="<?= $visa['image'] ?>" alt="<?= $visa['country'] ?>" /></a>
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne<?= $visa['country'] ?>" aria-expanded="true" aria-controls="collapseOne<?= $visa['country'] ?>">
+                                                Visa Fees & service charge.
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseOne<?= $visa['country'] ?>" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <ul>
+                                                <?php foreach ($visa['fees'] as $fee) : ?>
+                                                    <li><i class="icofont-checked text-success"></i> <?= $fee ?></li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingTwo">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo<?= $visa['country'] ?>" aria-expanded="false" aria-controls="collapseTwo<?= $visa['country'] ?>">
-                                            Visa Information Contact
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseTwo<?= $visa['country'] ?>" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                    <div class="card-body">
-                                        Anim pariatur cliche reprehenderit
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo<?= $visa['country'] ?>" aria-expanded="false" aria-controls="collapseTwo<?= $visa['country'] ?>">
+                                                Visa Information Contact
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseTwo<?= $visa['country'] ?>" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Anim pariatur cliche reprehenderit
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingThree">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree<?= $visa['country'] ?>" aria-expanded="false" aria-controls="collapseThree<?= $visa['country'] ?>">
-                                            We Accept
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseThree<?= $visa['country'] ?>" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                    <div class="card-body">
-                                        Anim pariatur cliche reprehenderit
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree<?= $visa['country'] ?>" aria-expanded="false" aria-controls="collapseThree<?= $visa['country'] ?>">
+                                                We Accept
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseThree<?= $visa['country'] ?>" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Anim pariatur cliche reprehenderit
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-12 p-4">
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="p-view-1">
-                                <h4><?= $visa['country'] ?> Visa</h4>
-                                <p><?= $visa['description'] ?></p>
-                                <h4><?= $visa['country'] ?> Visa Requirements.</h4>
-                                <ul>
-                                    <?php foreach ($visa['requirements'] as $requirement) : ?>
-                                        <li><i class="icofont-checked text-success"></i> <?= $requirement ?></li>
-                                    <?php endforeach; ?>
-                                </ul>
+                        <div class="col-md-6 col-12 p-4">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="p-view-1">
+                                    <h4><?= $visa['country'] ?> Visa</h4>
+                                    <p><?= $visa['description'] ?></p>
+                                    <h4><?= $visa['country'] ?> Visa Requirements.</h4>
+                                    <ul>
+                                        <?php foreach ($visa['requirements'] as $requirement) : ?>
+                                            <li><i class="icofont-checked text-success"></i> <?= $requirement ?></li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
-</section>
+            <?php endforeach; ?>
+        </div>
+    </section>
     <!-- Visa Requirements Area -->
     <!-- Footer Area -->
     <?php include 'php/footer.php'; ?>
