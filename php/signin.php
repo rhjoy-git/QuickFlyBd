@@ -13,7 +13,7 @@ $google_url = "#";
                     <div class="col-md-12">
                         <div class="form-block">
                             <div class="mb-3">
-                                <h3>Sign In to <a href="#"><span class="text-primary">Quick</span> <span class="text-danger">Fly</span></a></h3>
+                                <h3>Sign In to <a href="./index.php"><span class="text-primary">Quick</span> <span class="text-danger">Fly</span></a></h3>
                             </div>
                             <form action="#" method="post">
                                 <div class="form-group first">

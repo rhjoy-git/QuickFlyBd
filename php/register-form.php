@@ -39,7 +39,7 @@
                 <div id="password-error" class="error-message"></div> <!-- Error message container -->
             </div>
             <div class="mb-3 text-center">
-                <h6>Already have an account <a class="text-danger" href="signin.html">Sign In</a></h6>
+                <h6>Already have an account <a class="text-danger" href="./signin.php">Sign In</a></h6>
             </div>
             <div>
                 <button class="form-btn" name="submit" type="submit">Register</button>

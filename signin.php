@@ -33,21 +33,10 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
   <!-- Style CSS -->
-  <style>
-    html,
-    body {
-      height: 100%;
-      margin: 0;
-    }
 
-    body {
-      display: flex;
-      flex-direction: column;
-    }
-  </style>
 </head>
 
-<body>
+<body class="d-flex flex-column">
 
   <?php include './php/topbar.php';
   displayHeader($phone, $email, $facebook_url, $whatsapp_url); ?>

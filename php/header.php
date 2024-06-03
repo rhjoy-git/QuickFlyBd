@@ -12,7 +12,7 @@ $menu_items = [
         ['name' => 'Vietnam', 'link' => './visaServices.php#vietnam'],
         ['name' => 'Schengen Area', 'link' => './visaServices.php#schengenarea']
     ]],
-    ['name' => 'Hajj & Umrah', 'link' => '#', 'class' => 'sparkle sparkle-blink bg-danger', 'submenu' => []],
+    ['name' => 'Hajj & Umrah', 'link' => './umrahajj.php', 'class' => 'sparkle sparkle-blink bg-danger', 'submenu' => []],
     ['name' => 'Air Ticket', 'link' => './airticket.php', 'submenu' => []],
     ['name' => 'Tour Package', 'link' => 'blog.php', 'submenu' => []],
     ['name' => 'Man Power', 'link' => 'blog.php', 'submenu' => []],

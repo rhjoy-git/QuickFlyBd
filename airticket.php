@@ -54,7 +54,7 @@ $update_date = date("d M Y"); // Dynamic update date
   <link rel="stylesheet" href="css/magnific-popup.css" />
 </head>
 
-<body>
+<body class="d-flex flex-column">
   <!-- Preloader -->
   <?php include 'php/preloader.php'; ?>
   <!-- Get Developer Info -->

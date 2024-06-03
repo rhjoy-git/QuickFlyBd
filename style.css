@@ -3674,6 +3674,7 @@ ol li {
 	Start Air Ticket CSS
 ===========================*/
 .air-ticket {
+  flex: 1;
   position: relative;
   z-index: 1;
   padding-bottom: 90px;
@@ -3750,6 +3751,9 @@ table p {
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
+#umrahajj .btn,
+#umrahajj .btn:hover,
+#umrahajj .btn:focus,
 .country-area .card-header .btn,
 .country-area .card-header .btn:hover {
   color: #0d95e8;
@@ -3769,6 +3773,8 @@ table p {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+#umrahajj .btn:hover,
+#umrahajj .btn:focus,
 .country-area .card-header .btn:focus ,
 .country-area .card-header .btn:active {
   box-shadow: none;
@@ -3782,4 +3788,22 @@ table p {
   -webkit-transition: none;
   -moz-transition: none;
   transition: none;
+}
+/*=========================
+	Umrah and Hajj CSS
+===========================*/
+#umrahajj .package {
+  background: #eee;
+  margin: 18px 0;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.24);
+}
+#umrahajj .banner img {
+  height: 40vh;
+  object-fit: cover;
+}
+#umrahajj .offers-title{
+  padding: 8px 12px;
+  font-size: 24px !important;
+  color: #fff;
 }
