@@ -385,6 +385,17 @@ document.addEventListener('DOMContentLoaded', function () {
 		$('.preloader').addClass('preloader-deactivate');
 	});
 
+
+
+	$(document).ready(function () {
+		var screenWidth = screen.width;
+		if(screenWidth > 767){
+			$('#hajjcollapse').toggleClass('collapse');
+			$('#umracollapse').toggleClass('collapse');
+			console.log("Screen Width:", screenWidth);
+		}
+	});
+
 })(jQuery);
 /*===============================
 	Visa Requirement scrollspy
@@ -446,3 +457,5 @@ document.getElementById('registration-form').addEventListener('submit', function
 		document.getElementById('password-error').textContent = '';
 	}
 });
+
+//     ============== Umra and Hajj collapse ==============     //

@@ -27,11 +27,11 @@ body {
 .pro-features .get-pro {
   font-weight: 700;
 }
-.pro-features .get-pro:hover, 
-.pro-features .get-pro:focus{
+.pro-features .get-pro:hover,
+.pro-features .get-pro:focus {
   background-color: #ffbf00 !important;
 }
-.pro-features .get-pro i{
+.pro-features .get-pro i {
   color: #fff;
 }
 .pro-features.active {
@@ -3751,9 +3751,6 @@ table p {
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-#umrahajj .btn,
-#umrahajj .btn:hover,
-#umrahajj .btn:focus,
 .country-area .card-header .btn,
 .country-area .card-header .btn:hover {
   color: #0d95e8;
@@ -3773,9 +3770,7 @@ table p {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-#umrahajj .btn:hover,
-#umrahajj .btn:focus,
-.country-area .card-header .btn:focus ,
+.country-area .card-header .btn:focus,
 .country-area .card-header .btn:active {
   box-shadow: none;
   outline: none !important;
@@ -3792,18 +3787,121 @@ table p {
 /*=========================
 	Umrah and Hajj CSS
 ===========================*/
+#umrahajj .umrahajj-title{
+  text-align: center;
+  font-family: "Exo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.5rem;
+  color: green;
+  line-height: 2.5rem;
+
+}
 #umrahajj .package {
   background: #eee;
-  margin: 18px 0;
+  margin: 10px 0 18px;
   border-radius: 8px;
   box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.24);
+  transition: transform 0.3s ease;
+}
+#umrahajj .package:hover {
+  transform: scale(1.05);
 }
 #umrahajj .banner img {
-  height: 40vh;
+  height: 35vh;
   object-fit: cover;
 }
-#umrahajj .offers-title{
+#umrahajj .btn{
+  color: #fff;
+  background-color: green;
+  font-size: 1.2rem;
+  padding: 8px 24px;
+  font-family: "Exo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  width: 100%;
+}
+#umrahajj .btn:hover,
+#umrahajj .btn:focus{
+  text-decoration: underline;
+}
+#umrahajj .offers-title {
   padding: 8px 12px;
   font-size: 24px !important;
   color: #fff;
+}
+
+#umrahajj .package-title .title {
+  position: relative;
+  font-family: "Exo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+#umrahajj .package-title .title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 90%;
+  height: 2px;
+  background-color: green;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+#umrahajj .package-title .title:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+#umrahajj .package-title > ul > li {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #121521;
+  font-weight: 500;
+}
+#umrahajj .package-title > ul > li > i {
+  color: crimson;
+}
+#umrahajj .package-offers > ul > li {
+  padding: 2px;
+}
+#umrahajj .package-offers > ul > li > a {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  color: #666;
+  position: relative;
+}
+#umrahajj .package-offers > ul > li > a:hover {
+  color:#FFD700;
+  transform: scaleX(1.1);
+}
+#umrahajj .package-offers > ul > li > a::after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  bottom: 0;
+  width: 50%;
+  height: 2px;
+  background-color:#fff200;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+#umrahajj .package-offers > ul > li > a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+#umrahajj .package-offers > ul > li > a > i {
+  font-size: 1.5rem;
+  color: rgb(188, 164, 24);
+}
+#umrahajj .package-price > h6{
+  font-size: 1.2rem;
+  font-family: "Exo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }

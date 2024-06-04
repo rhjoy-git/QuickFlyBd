@@ -39,7 +39,9 @@
     height: 56px;
     width: 106px;
   }
+  
 }
+
 /* Tablet Screen */
 @media only screen and (min-width: 768px) and (max-width: 991.5px) {
   /* Header Sticky */
@@ -403,6 +405,14 @@
   .footer .footer-top {
     padding: 65px 0px;
   }
+
+  #umrahajj .package-img img{
+    height: 30vh;
+    margin-bottom: 20px;
+   }
+   #umrahajj .package-price .btn{
+    padding: 4px;
+   }
 }
 /* Mobile Screen */
 @media only screen and (min-width: 450px) and (max-width: 767.5px) {
@@ -777,7 +787,6 @@
   .departments .department-right {
     margin-top: 30px;
   }
-
   .departments .department-right img {
     height: 100%;
     width: 100%;
@@ -1055,6 +1064,11 @@
   .footer .copyright {
     padding: 20px 0;
   }
+
+  #umrahajj .package-img img{
+    height: 30vh;
+    margin-bottom: 20px;
+   }
 }
 @media only screen and (min-width: 450px) and (max-width: 576px) {
   .feature-item::before {
@@ -1481,4 +1495,9 @@
   .footer .footer-top {
     padding: 65px 0px;
   }
+
+  #umrahajj .package-img img{
+    height: 30vh;
+    margin-bottom: 20px;
+   }
 }
