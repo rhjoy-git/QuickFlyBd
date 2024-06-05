@@ -2,8 +2,8 @@
 $services = [
     ["title" => "visa","link" => "./visaservice.php" , "imgSrc" => "./img/services/visa.jpg", "class" => "w-100 rounded zoom-on-hover shadow border", "alt" => "visa service"],
     ["title" => "air-ticket","link" => "./airticket.php" , "imgSrc" => "./img/services/air-ticket.jpg", "class" => "w-100 rounded zoom-on-hover shadow border", "alt" => "air ticket service"],
-    ["title" => "umrah","link" => "#" , "imgSrc" => "./img/services/umrah.jpg", "class" => "w-100 rounded zoom-on-hover shadow border", "alt" => "umrah service"],
-    ["title" => "hajj","link" => "#" , "imgSrc" => "./img/services/hajj.jpg", "class" => "w-100 rounded zoom-on-hover shadow border", "alt" => "hajj service"]
+    ["title" => "umrah","link" => "./umrahajj.php" , "imgSrc" => "./img/services/umrah.jpg", "class" => "w-100 rounded zoom-on-hover shadow border", "alt" => "umrah service"],
+    ["title" => "hajj","link" => "./umrahajj.php" , "imgSrc" => "./img/services/hajj.jpg", "class" => "w-100 rounded zoom-on-hover shadow border", "alt" => "hajj service"]
 ];
 ?>
 
