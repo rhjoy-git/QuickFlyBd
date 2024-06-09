@@ -30,6 +30,33 @@ Version:	1.1
 =========================================
 [End Activation Code]
 =========================================*/
+/*    NAVIGATION LINK ACTIVE TOGGLE */
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.header .nav li');
+    
+    const setActiveNavLink = (index) => {
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+        navLinks[index].classList.add('active');
+        localStorage.setItem('activeNavLink', index);
+    };
+
+    // Add click event listener to each navigation item
+    navLinks.forEach((navLink, index) => {
+        navLink.addEventListener('click', () => {
+            setActiveNavLink(index);
+        });
+    });
+
+    // Check if there's a stored active navigation link and set it
+    const activeIndex = localStorage.getItem('activeNavLink');
+    if (activeIndex !== null) {
+        setActiveNavLink(parseInt(activeIndex));
+    }
+});
+
+
 /*=================================
 Cart Text Limit
 ===================================*/
@@ -61,27 +88,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
-/*===============================
-		Holiday Slider Filter
-=================================*/
-document.addEventListener('DOMContentLoaded', function () {
-	const buttons = document.querySelectorAll('#middle-tab');
-	const cards = document.querySelectorAll('.country-card');
-
-	buttons.forEach(button => {
-		button.addEventListener('click', function () {
-			const continent = this.getAttribute('data-continent');
-
-			cards.forEach(card => {
-				if (continent === 'all' || card.getAttribute('data-continent') === continent) {
-					card.classList.remove('hidden');
-				} else {
-					card.classList.add('hidden');
-				}
-			});
-		});
-	});
-});
 /*=========================================*/
 (function ($) {
 	"use strict";
@@ -392,7 +398,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		if(screenWidth > 767){
 			$('#hajjcollapse').toggleClass('collapse');
 			$('#umracollapse').toggleClass('collapse');
-			console.log("Screen Width:", screenWidth);
 		}
 	});
 

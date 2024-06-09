@@ -30,7 +30,7 @@ function topBar($phone, $email, $facebook_url, $whatsapp_url)
                             <a href="<?php echo $whatsapp_url; ?>" target="_blank"><i class="icofont-whatsapp"></i></a>
                         </li>
                         <li>
-                            <a href="register.php" target="_blank"><i class="icofont-user"></i></a>
+                            <a href="signin.php" target="_blank"><i class="icofont-user"></i></a>
                         </li>
                     </ul>
                     <!-- End Contact -->

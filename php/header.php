@@ -1,23 +1,32 @@
 <?php
-// Dynamic data (this could come from a database or other sources)
+include('config.php');
+
 $logo_url = "img/logov.png";
-$menu_items = [
-    ['name' => 'Home', 'link' => 'index.php', 'submenu' => []],
-    ['name' => 'Visa Services', 'link' => './visaServices.php', 'submenu' => [
-        ['name' => 'Malaysia', 'link' => './visaServices.php#malaysia'],
-        ['name' => 'Singapore', 'link' => './visaServices.php#singapore'],
-        ['name' => 'Thailand', 'link' => './visaServices.php#thailand',],
-        ['name' => 'Dubai', 'link' => './visaServices.php#dubai'],
-        ['name' => 'China', 'link' => './visaServices.php#china'],
-        ['name' => 'Vietnam', 'link' => './visaServices.php#vietnam'],
-        ['name' => 'Schengen Area', 'link' => './visaServices.php#schengenarea']
-    ]],
-    ['name' => 'Hajj & Umrah', 'link' => './umrahajj.php', 'class' => 'sparkle sparkle-blink bg-danger', 'submenu' => []],
-    ['name' => 'Air Ticket', 'link' => './airticket.php', 'submenu' => []],
-    ['name' => 'Tour Package', 'link' => 'blog.php', 'submenu' => []],
-    ['name' => 'Man Power', 'link' => 'blog.php', 'submenu' => []],
-    ['name' => 'Contact', 'link' => 'contact.php', 'submenu' => []]
-];
+
+// SQL Query to fetch menu items
+$sql = "SELECT * FROM `menu_items`";
+$result = $conn->query($sql);
+
+$menu_items = [];
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $menu_items[] = $row;
+    }
+
+    foreach ($menu_items as $index => $menu_item) {
+        $sql = "SELECT * FROM `sub_menu_items` WHERE `menu_item_id` = " . $menu_item['id'];
+        $sub_result = $conn->query($sql);
+
+        $submenu_items = [];
+        if ($sub_result->num_rows > 0) {
+            while ($sub_row = $sub_result->fetch_assoc()) {
+                $submenu_items[] = $sub_row;
+            }
+        }
+        $menu_items[$index]['submenu'] = $submenu_items; // Update the original array
+    }
+}
+$conn->close();
 ?>
 
 <!-- Header Area -->

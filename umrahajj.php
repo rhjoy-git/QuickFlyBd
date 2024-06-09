@@ -1,15 +1,7 @@
 <?php
 $offers = [
     "Umra Offers 1",
-    "Umra Offers 2",
-    "Umra Offers 3",
-    "Umra Offers 4",
-    "Umra Offers 5",
-    "Umra Offers 6",
-    "Umra Offers 7",
-    "Umra Offers 8",
-    "Umra Offers 9",
-    "Umra Offers 10"
+    "Umra Offers 2"
 ];
 
 $packages = [
@@ -27,20 +19,7 @@ $packages = [
         "link" => "#"
     ],
     [
-        "title" => "Economy Umrah Package",
-        "image" => "./img/user.jpg",
-        "details" => [
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet."
-        ],
-        "price" => "Begins 1,20,000/-bdt",
-        "link" => "#"
-    ],
-    [
-        "title" => "Economy Umrah Package",
+        "title" => "Economy Hajj Package",
         "image" => "./img/user.jpg",
         "details" => [
             "Lorem ipsum dolor sit amet.",
@@ -57,7 +36,7 @@ $packages = [
 
 
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
+<html lang="en">
 
 <head>
     <!-- Meta Tags -->
@@ -141,7 +120,7 @@ $packages = [
                         </a>
                         <ul id="hajjcollapse" class="collapse">
                             <?php foreach ($offers as $offer) : ?>
-                                <li><a href="#"><i class="icofont-hand-right"></i><?= $offer ?></a></li>
+                                <li><a href=""><i class="icofont-hand-right"></i><?= $offer ?></a></li>
                             <?php endforeach; ?>
                         </ul>
                     </div>
@@ -151,7 +130,7 @@ $packages = [
                         </a>
                         <ul id="umracollapse" class="collapse">
                             <?php foreach ($offers as $offer) : ?>
-                                <li><a href="#"><i class="icofont-hand-right"></i><?= $offer ?></a></li>
+                                <li><a href=""><i class="icofont-hand-right"></i><?= $offer ?></a></li>
                             <?php endforeach; ?>
                         </ul>
                     </div>

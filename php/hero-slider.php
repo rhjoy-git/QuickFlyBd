@@ -1,78 +1,59 @@
 <?php
 // Dynamic data (this could come from a database or other sources)
-$slides = [
-    [
-        'image' => 'img/slider/slider1.jpg',
-        'title' => 'We Provide <span>Travel</span> Packages That You Can <span>Trust!</span>',
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam.',
-        'buttons' => [
-            ['text' => 'Get Appointment', 'link' => 'contact.html', 'class' => 'btn'],
-            ['text' => 'Learn More', 'link' => '#', 'class' => 'btn primary']
-        ]
-    ],
-    [
-        'image' => 'img/slider/slider2.jpg',
-        'title' => 'We Provide <span>Hajj & Umrah</span> Packages That You Can <span>Trust!</span>',
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam.',
-        'buttons' => [
-            ['text' => 'Get Appointment', 'link' => 'contact.html', 'class' => 'btn'],
-            ['text' => 'About Us', 'link' => '#', 'class' => 'btn primary']
-        ]
-    ],
-    [
-        'image' => 'img/slider/slider3.jpg',
-        'title' => 'We Provide <span>Flight Ticket</span> That You Can <span>Trust!</span>',
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam.',
-        'buttons' => [
-            ['text' => 'Get Appointment', 'link' => 'contact.html', 'class' => 'btn'],
-            ['text' => 'Contact Now', 'link' => '#', 'class' => 'btn primary']
-        ]
-    ],
-    [
-        'image' => 'img/slider/slider4.jpg',
-        'title' => 'We Provide <span>Man Power</span> Services That You Can <span>Trust!</span>',
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam.',
-        'buttons' => [
-            ['text' => 'Get Appointment', 'link' => 'contact.html', 'class' => 'btn'],
-            ['text' => 'Contact Now', 'link' => '#', 'class' => 'btn primary']
-        ]
-    ],
-    [
-        'image' => 'img/slider/slider5.jpg',
-        'title' => 'We Provide <span>Visa & Passport</span> Process services That You Can <span>Trust!</span>',
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam.',
-        'buttons' => [
-            ['text' => 'Get Appointment', 'link' => 'contact.html', 'class' => 'btn'],
-            ['text' => 'Contact Now', 'link' => '#', 'class' => 'btn primary']
-        ]
-    ]
-];
+include("config.php");
+
+// Fetch slides
+$sql = "SELECT * FROM slides";
+$result = $conn->query($sql);
+
+$slides = [];
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $slide_id = $row['id'];
+        $row['buttons'] = []; // Initialize buttons array for each slide
+        $slides[$slide_id] = $row;
+    }
+
+    // Fetch buttons for each slide
+    $sql = "SELECT * FROM slide_buttons";
+    $button_result = $conn->query($sql);
+
+    if ($button_result->num_rows > 0) {
+        while ($button_row = $button_result->fetch_assoc()) {
+            $slide_id = $button_row['slide_id'];
+            $slides[$slide_id]['buttons'][] = $button_row;
+        }
+    }
+}
+
+$conn->close();
 ?>
 
 <!-- Slider Area -->
 <section class="slider">
-  <div class="hero-slider">
-    <?php foreach ($slides as $slide): ?>
-      <!-- Start Single Slider -->
-      <div class="single-slider" style="background-image: url('<?php echo $slide['image']; ?>')">
-        <div class="container">
-          <div class="row ">
-            <div class="col-xl-7 col-lg-8">
-              <div class="text">
-                <h1><?php echo $slide['title']; ?></h1>
-                <p><?php echo $slide['description']; ?></p>
-                <div class="button">
-                  <?php foreach ($slide['buttons'] as $button): ?>
-                    <a href="<?php echo $button['link']; ?>" class="<?php echo $button['class']; ?>"><?php echo $button['text']; ?></a>
-                  <?php endforeach; ?>
+    <div class="hero-slider">
+        <?php foreach ($slides as $slide) : ?>
+            <!-- Start Single Slider -->
+            <div class="single-slider" style="background-image: url('<?php echo $slide['image']; ?>')">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-xl-7 col-lg-8">
+                            <div class="text">
+                                <h1><?php echo $slide['title']; ?></h1>
+                                <p><?php echo $slide['description']; ?></p>
+                                <div class="button">
+                                    <?php foreach ($slide['buttons'] as $button) : ?>
+                                        <a href="<?php echo $button['link']; ?>" class="<?php echo $button['class']; ?>"><?php echo $button['text']; ?></a>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Single Slider -->
-    <?php endforeach; ?>
-  </div>
+            <!-- End Single Slider -->
+        <?php endforeach; ?>
+    </div>
 </section>
 <!--/ End Slider Area -->

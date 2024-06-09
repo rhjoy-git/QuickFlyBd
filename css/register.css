@@ -37,6 +37,7 @@
 }
 .phone-number .form-span {
   border: 1px solid #ced4da !important;
+  border-radius: 6px 0 0 6px !important;
   padding: 12px 20px !important;
   border-right: none !important;
   background-color: #e9ecef !important;

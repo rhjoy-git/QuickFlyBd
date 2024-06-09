@@ -113,10 +113,6 @@
                     <div class="form-group login-btn">
                       <button class="btn" type="submit">Send</button>
                     </div>
-                    <div class="checkbox">
-                      <label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox" />Do you
-                        want to subscribe our Newsletter ?</label>
-                    </div>
                   </div>
                 </div>
               </form>
@@ -158,8 +154,8 @@
             <div class="single-info">
               <i class="icofont icofont-wall-clock"></i>
               <div class="content">
-                <h3>Mon - Sat: 8am - 5pm</h3>
-                <p>Sunday Closed</p>
+                <h3>Sun - Sat: 8am - 5pm</h3>
+                <p>Friday Closed</p>
               </div>
             </div>
           </div>

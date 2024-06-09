@@ -1,12 +1,21 @@
 <?php
-$flights = [
-  ["origin" => "Dhaka", "destination" => "Delhi", "price1" => "BDT 14000", "price2" => "BDT 23500"],
-  ["origin" => "Dhaka", "destination" => "Chennai", "price1" => "BDT 14500", "price2" => "BDT 26300"],
-  ["origin" => "Dhaka", "destination" => "Qatar", "price1" => "N/A", "price2" => "BDT 65000"],
-  ["origin" => "Dhaka", "destination" => "London", "price1" => "BDT 54500", "price2" => "BDT 101000"],
-];
+include("./php/config.php");
 
 $update_date = date("d M Y"); // Dynamic update date
+
+// Fetch flights from the database
+$sql = "SELECT * FROM flights";
+$result = $conn->query($sql);
+
+$flights = [];
+
+if ($result->num_rows > 0) {
+  while ($row = $result->fetch_assoc()) {
+    $flights[] = $row;
+  }
+}
+
+$conn->close();
 ?>
 
 

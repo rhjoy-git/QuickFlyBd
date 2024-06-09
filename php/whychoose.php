@@ -1,22 +1,21 @@
 <?php
-// Dynamic data (this could come from a database or other sources)
-$video = [
-    'title' => 'Who We Are',
-    'description1' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra antege vel est lobortis, a commodo magna rhoncus. In quis nisi non emet quam pharetra commodo.',
-    'description2' => 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-    'list1' => [
-        'Maecenas vitae luctus nibh.',
-        'Duis massa massa.',
-        'Aliquam feugiat interdum.'
-    ],
-    'list2' => [
-        'Maecenas vitae luctus nibh.',
-        'Duis massa massa.',
-        'Aliquam feugiat interdum.'
-    ],
-    'video_url' => 'https://www.youtube.com/watch?v=HTNl_tiPcpk',
-    'video_img' => 'img/section-img.png'
-];
+include('config.php');
+
+// SQL query to select the video data
+$sql = 'SELECT * FROM video LIMIT 1';
+$result = $conn->query($sql);
+
+$video = [];
+
+if ($result->num_rows > 0) {
+    $video = $result->fetch_assoc();
+    
+    // Convert pipe-separated lists to arrays
+    $video['list1'] = explode('|', $video['list1']);
+    $video['list2'] = explode('|', $video['list2']);
+}
+
+$conn->close();
 ?>
 
 <section class="why-choose section">

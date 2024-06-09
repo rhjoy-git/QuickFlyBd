@@ -1,27 +1,22 @@
 <?php
-// Dynamic data (this could come from a database or other sources)
-$features = [
-    [
-        'icon' => 'img/Civil Aviation.png',
-        'alt' => 'Civil Aviation icon',
-        'text' => 'Civil Aviation<br />Authorized'
-    ],
-    [
-        'icon' => 'img/bank.png',
-        'alt' => 'secure icon',
-        'text' => '100% Secure<br />Payments'
-    ],
-    [
-        'icon' => 'img/call-support.png',
-        'alt' => 'call support icon',
-        'text' => '24/7 Support<br />During tour'
-    ],
-    [
-        'icon' => 'img/bestoffer.png',
-        'alt' => 'best choice icon',
-        'text' => 'All the best offers<br />in one place'
-    ]
-];
+include('config.php');
+
+// SQL query to select all services
+$sql = 'SELECT * FROM `features`';
+$result = $conn->query($sql);
+
+$features = [];
+
+// Check if the query returned any results
+if ($result->num_rows > 0) {
+    // Fetch the results and store them in the $services array
+    while ($row = $result->fetch_assoc()) {
+        $features[] = $row;
+    }
+}
+
+// Close the database connection
+$conn->close();
 ?>
 
 <section class="features section">

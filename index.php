@@ -59,8 +59,6 @@
   <?php include 'php/blog.php'; ?>
   <!--  clients -->
   <?php include 'php/clients.php'; ?>
-  <!--  Newsletter Area -->
-  <?php include 'php/newsletter.php'; ?>
   <!-- Footer Area -->
   <?php include 'php/footer.php'; ?>
 
