@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet" />
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- Medipro CSS -->
+  <!-- Medipro CSS -->
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
@@ -54,11 +54,13 @@
   <!--  Features -->
   <?php include 'php/features.php'; ?>
   <!--  Why choose -->
-  <?php include 'php/whychoose.php'; ?>
+  <?php include 'php/whoweare.php'; ?>
   <!--  Blog Area -->
   <?php include 'php/blog.php'; ?>
   <!--  clients -->
   <?php include 'php/clients.php'; ?>
+  <!--  whychoose -->
+  <?php include 'php/whychoose.php'; ?>
   <!-- Footer Area -->
   <?php include 'php/footer.php'; ?>
 

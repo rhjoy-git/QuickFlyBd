@@ -364,7 +364,9 @@ ol li {
   animation: fadeInDown 0.5s both 0.1s;
   box-shadow: 0px 0px 13px #00000054;
 }
-
+.header .nav .sparkle {
+  background-color: #964b4c;
+}
 .header .nav .sparkle a {
   color: #fff;
 }
@@ -387,21 +389,25 @@ ol li {
   box-shadow: 0 0 5px #ff0, 0 0 10px #ff0, 0 0 15px #ff0;
   animation: glow 1.5s infinite;
 }
+.header .nav li.sparkle.active a {
+  color: #fff !important;
+}
 .header .nav .sparkle.sparkle-blink {
   animation: glow 1.5s infinite;
 }
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 2px #257bd1, 0 0 4px #257bd1, 0 0 6px #257bd1;
+    box-shadow: 0 0 2px #00ccff, 0 0 4px #00ccff, 0 0 6px #00ccff;
   }
   50% {
-    box-shadow: 0 0 4px #257bd1, 0 0 8px #257bd1, 0 0 12px #257bd1;
+    box-shadow: 0 0 4px #00ccff, 0 0 8px #00ccff, 0 0 12px #00ccff;
   }
   100% {
-    box-shadow: 0 0 2px #257bd1, 0 0 4px #257bd1, 0 0 6px #257bd1;
+    box-shadow: 0 0 2px #00ccff, 0 0 4px #00ccff, 0 0 6px #00ccff;
   }
 }
+
 /*=========================
 	End Header CSS
 ===========================*/
@@ -561,10 +567,10 @@ ol li {
 ===============================*/
 
 /*===================
-	Why choose CSS
+	Who we are CSS
 =====================*/
 
-.why-choose .choose-left h3 {
+.who-we-are .choose-left h3 {
   font-size: 24px;
   font-weight: 600;
   color: #2c2d3f;
@@ -572,7 +578,7 @@ ol li {
   padding-bottom: 20px;
   margin-bottom: 24px;
 }
-.why-choose .choose-left h3:before {
+.who-we-are .choose-left h3:before {
   position: absolute;
   content: "";
   left: 0;
@@ -581,18 +587,18 @@ ol li {
   width: 50px;
   background: #1a76d1;
 }
-.why-choose .choose-left p {
+.who-we-are .choose-left p {
   margin-bottom: 35px;
 }
 
-.why-choose .choose-left .list li {
+.who-we-are .choose-left .list li {
   color: #868686;
   margin-bottom: 12px;
 }
-.why-choose .choose-left .list li:last-child {
+.who-we-are .choose-left .list li:last-child {
   margin-bottom: 0px;
 }
-.why-choose .choose-left .list li i {
+.who-we-are .choose-left .list li i {
   height: 15px;
   width: 15px;
   line-height: 15px;
@@ -605,10 +611,10 @@ ol li {
   margin-right: 16px;
 }
 /* Start Faq CSS */
-.why-choose {
+.who-we-are {
   background: #fff;
 }
-.why-choose .choose-right {
+.who-we-are .choose-right {
   height: 100%;
   width: 100%;
   background-image: url("img/mamun.jpg");
@@ -617,7 +623,7 @@ ol li {
   background-repeat: no-repeat;
   position: relative;
 }
-.why-choose .choose-right .video {
+.who-we-are .choose-right .video {
   color: #fff;
   height: 70px;
   width: 70px;
@@ -633,10 +639,10 @@ ol li {
   background: #1a76d1;
   padding-left: 4px;
 }
-.why-choose .choose-right .video:hover {
+.who-we-are .choose-right .video:hover {
   transform: scale(1.1);
 }
-.why-choose .video-image .waves-block .waves {
+.who-we-are .video-image .waves-block .waves {
   position: absolute;
   width: 200px;
   height: 200px;
@@ -651,20 +657,20 @@ ol li {
   top: 50%;
   margin-top: -100px;
 }
-.why-choose .video-image .waves-block .wave-1 {
+.who-we-are .video-image .waves-block .wave-1 {
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
 }
-.why-choose .video-image .waves-block .wave-2 {
+.who-we-are .video-image .waves-block .wave-2 {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
-.why-choose .video-image .waves-block .wave-3 {
+.who-we-are .video-image .waves-block .wave-3 {
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
 }
 /*=======================
-	End Why choose CSS
+	End Who we are CSS
 =========================
 	Start Blog CSS
 =========================*/
@@ -1461,7 +1467,6 @@ ol li {
 /*=========================
    End Contact Us CSS
 ===========================*/
-
 
 /*=========================
 	Start Sign In CSS
@@ -2766,7 +2771,7 @@ table p {
 /*=========================
 	Umrah and Hajj CSS
 ===========================*/
-#umrahajj .umrahajj-title{
+#umrahajj .umrahajj-title {
   text-align: center;
   font-family: "Exo", sans-serif;
   font-optical-sizing: auto;
@@ -2775,7 +2780,6 @@ table p {
   font-size: 2.5rem;
   color: green;
   line-height: 2.5rem;
-
 }
 #umrahajj .package {
   background: #eee;
@@ -2791,7 +2795,7 @@ table p {
   height: 35vh;
   object-fit: cover;
 }
-#umrahajj .btn{
+#umrahajj .btn {
   color: #fff;
   background-color: green;
   font-size: 1.2rem;
@@ -2803,7 +2807,7 @@ table p {
   width: 100%;
 }
 #umrahajj .btn:hover,
-#umrahajj .btn:focus{
+#umrahajj .btn:focus {
   text-decoration: underline;
 }
 #umrahajj .offers-title {
@@ -2853,9 +2857,9 @@ table p {
   color: #666;
   position: relative;
 }
-#umrahajj .package-offers > ul > li > a:hover, 
+#umrahajj .package-offers > ul > li > a:hover,
 #umrahajj .package-offers > ul > li > a:active {
-  color:#FFD700;
+  color: #ffd700;
   transform: scaleX(1.1);
 }
 #umrahajj .package-offers > ul > li > a::after {
@@ -2865,7 +2869,7 @@ table p {
   bottom: 0;
   width: 50%;
   height: 2px;
-  background-color:#fff200;
+  background-color: #fff200;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease;
@@ -2878,10 +2882,44 @@ table p {
   font-size: 1.5rem;
   color: rgb(188, 164, 24);
 }
-#umrahajj .package-price > h6{
+#umrahajj .package-price > h6 {
   font-size: 1.2rem;
   font-family: "Exo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
 }
+/* ============
+Why chosse us
+==============*/
+.why-choose .element-icon{
+  margin-bottom: 20px;
+}
+.why-choose .element-icon > span {
+  display: inline-block;
+  font-size: 24px;
+  padding: 16px;
+  border-radius: 16px 16px 16px 16px;
+  background-color: #1a76d1;
+  color: #fff;
+}
+.why-choose .element-icon > span:hover {
+  color: rgb(180, 179, 179);
+}
+.why-choose .element-icon > span > i {
+  width: 1em;
+  height: 1em;
+  position: relative;
+  display: block;
+}
+.why-choose .element-icon > span > i::before{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.why-choose .element-content > p{
+  margin-top: 10px;
+  line-height: 2rem;
+  font-size: 1rem;
+}
+
