@@ -1,38 +1,37 @@
 <?php
-$offers = [
-    "Umra Offers 1",
-    "Umra Offers 2"
-];
+// Include the config file to establish database connection
+include './php/config.php';
 
-$packages = [
-    [
-        "title" => "Economy Umrah Package",
-        "image" => "./img/user.jpg",
-        "details" => [
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet."
-        ],
-        "price" => "Begins 1,20,000/-bdt",
-        "link" => "#"
-    ],
-    [
-        "title" => "Economy Hajj Package",
-        "image" => "./img/user.jpg",
-        "details" => [
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet.",
-            "Lorem ipsum dolor sit amet."
-        ],
-        "price" => "Begins 1,20,000/-bdt",
-        "link" => "#"
-    ]
-];
+// Fetch data from hajj_packages table
+$sql1 = "SELECT * FROM `hajj_packages`";
+$result1 = $conn->query($sql1);
+$hajjPackages = [];
+// Check if any result is returned for hajj_packages
+if ($result1->num_rows > 0) {
+    // Loop through each row of hajj_packages
+    while ($row = $result1->fetch_assoc()) {
+        // Add each row to the $hajjPackages array
+        $hajjPackages[] = $row;
+    }
+}
+$umraPackages = [];
+// Fetch data from umra_packages table
+$sql2 = "SELECT * FROM `umra_packages`";
+$result2 = $conn->query($sql2);
+
+// Check if any result is returned for umra_packages
+if ($result2->num_rows > 0) {
+    // Loop through each row of umra_packages
+    while ($row = $result2->fetch_assoc()) {
+        // Add each row to the $umraPackages array
+        $umraPackages[] = $row;
+    }
+}
+
+// Close the database connection
+$conn->close();
 ?>
+
 
 
 <!DOCTYPE html>
@@ -113,14 +112,16 @@ $packages = [
                     </div>
                 </div>
                 <!--  ========  Packages  ==========  -->
+            </div>
+            <div class="row">
                 <div class=" col-12 col-md-4 col-lg-3">
                     <div class="package-offers p-1 bg-white rounded mb-3">
                         <a href="#hajjcollapse" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="hajjcollapse">
                             <h4 class="link offers-title bg-success rounded ">Hajj Packages <i class="icofont-stylish-down"></i></h4>
                         </a>
                         <ul id="hajjcollapse" class="collapse">
-                            <?php foreach ($offers as $offer) : ?>
-                                <li><a href=""><i class="icofont-hand-right"></i><?= $offer ?></a></li>
+                            <?php foreach ($hajjPackages as $hajjpack) : ?>
+                                <li><a href=""><i class="icofont-hand-right"></i><?= $hajjpack['title'] ?></a></li>
                             <?php endforeach; ?>
                         </ul>
                     </div>
@@ -129,41 +130,78 @@ $packages = [
                             <h4 class="link offers-title bg-success rounded ">Umrah Packages <i class="icofont-stylish-down"></i></h4>
                         </a>
                         <ul id="umracollapse" class="collapse">
-                            <?php foreach ($offers as $offer) : ?>
-                                <li><a href=""><i class="icofont-hand-right"></i><?= $offer ?></a></li>
+                            <?php foreach ($umraPackages as $umrapack) : ?>
+                                <li><a href=""><i class="icofont-hand-right"></i><?= $umrapack['title'] ?></a></li>
                             <?php endforeach; ?>
                         </ul>
                     </div>
-
                 </div>
                 <!--  ========  ==========  -->
-                <div class="col-md-8 col-lg-9">
-                    <?php foreach ($packages as $package) : ?>
+                <div class="col-12 col-md-8 col-lg-9">
+                    <?php foreach ($umraPackages as $umrapackage) : ?>
                         <div class="package py-2 pt-md-0 pb-md-2">
                             <div class="row align-items-center justify-content-center rounded p-3">
                                 <div class="col-md-12 col-lg-3">
                                     <div class="package-img">
-                                        <a href="<?= $package['link'] ?>">
-                                            <img src="<?= $package['image'] ?>" class="w-100 img-fluid rounded" alt="<?= $package['title'] ?>" />
+                                        <a href="<?= $umrapackage['link'] ?>">
+                                            <img src="<?= $umrapackage['image'] ?>" class="w-100 img-fluid rounded" alt="<?= $umrapackage['title'] ?>" />
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-md-9 col-lg-6 align-self-start">
                                     <div class="package-title">
-                                        <a href="<?= $package['link'] ?>" class="title">
-                                            <h3 class="text-success mb-2"><?= $package['title'] ?></h3>
+                                        <a href="<?= $umrapackage['link'] ?>" class="title">
+                                            <h3 class="text-success mb-2"><?= $umrapackage['title'] ?></h3>
                                         </a>
+                                        <!-- Inside the loop where you display Umrah Packages -->
                                         <ul>
-                                            <?php foreach ($package['details'] as $detail) : ?>
+                                            <?php $details = explode("\n", $umrapackage['details']); ?>
+                                            <?php foreach ($details as $detail) : ?>
                                                 <li><i class="icofont-hand-drawn-right"></i> <?= $detail ?></li>
                                             <?php endforeach; ?>
                                         </ul>
+
                                     </div>
                                 </div>
                                 <div class="col-md-3 col-lg-3">
                                     <div class="package-price">
-                                        <h6 class="my-3"><?= $package['price'] ?></h6>
-                                        <a href="<?= $package['link'] ?>" class="btn btn-success text-center">Details</a>
+                                        <h6 class="my-3"><?= $umrapackage['price'] ?></h6>
+                                        <a href="<?= $umrapackage['link'] ?>" class="btn btn-success text-center">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+
+                    <?php foreach ($hajjPackages as $hajjpackage) : ?>
+                        <div class="package py-2 pt-md-0 pb-md-2">
+                            <div class="row align-items-center justify-content-center rounded p-3">
+                                <div class="col-md-12 col-lg-3">
+                                    <div class="package-img">
+                                        <a href="<?= $hajjpackage['link'] ?>">
+                                            <img src="<?= $hajjpackage['image'] ?>" class="w-100 img-fluid rounded" alt="<?= $umrapackage['title'] ?>" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-lg-6 align-self-start">
+                                    <div class="package-title">
+                                        <a href="<?= $hajjpackage['link'] ?>" class="title">
+                                            <h3 class="text-success mb-2"><?= $hajjpackage['title'] ?></h3>
+                                        </a>
+                                        <!-- Inside the loop where you display Umrah Packages -->
+                                        <ul>
+                                            <?php $details = explode("\n", $hajjpackage['details']); ?>
+                                            <?php foreach ($details as $detail) : ?>
+                                                <li><i class="icofont-hand-drawn-right"></i> <?= $detail ?></li>
+                                            <?php endforeach; ?>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-lg-3">
+                                    <div class="package-price">
+                                        <h6 class="my-3"><?= $hajjpackage['price'] ?></h6>
+                                        <a href="<?= $hajjpackage['link'] ?>" class="btn btn-success text-center">Details</a>
                                     </div>
                                 </div>
                             </div>

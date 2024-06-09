@@ -2892,7 +2892,7 @@ table p {
 /* ============
 Why chosse us
 ==============*/
-.why-choose .element-icon{
+.why-choose .element-icon {
   margin-bottom: 20px;
 }
 .why-choose .element-icon > span {
@@ -2912,14 +2912,46 @@ Why chosse us
   position: relative;
   display: block;
 }
-.why-choose .element-icon > span > i::before{
+.why-choose .element-icon > span > i::before {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
-.why-choose .element-content > p{
+.why-choose .element-content > p {
   margin-top: 10px;
   line-height: 2rem;
   font-size: 1rem;
 }
 
+/* ==============
+  Tour package
+  ============*/
+.tour-pack-item .card-body .btn {
+  color: #fff;
+}
+.tour-pack-item {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px -8px #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tour-pack-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 2px 20px -8px #000;
+}
+.tour-pack-item > img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.tour-pack-item .card-body .bg-blue-2 {
+  background-color: #00ccff;
+}
+.tour-pack-item .card-body .bg-light-blue {
+  background-color: #add8e6;
+}
